@@ -5,8 +5,10 @@ if (process.argv.length < 4 || process.argv.length > 5) {
   process.exit(1)
 }
 
+// Verification des inputs
 if (isNaN(process.argv[2])) {
   console.log(`pyramidBaseNumber (${process.argv[2]}) must be a number`)
+  process.exit(1)
 }
 if (process.argv[3].length !== 1) {
   console.log(`displayedCharacter (${process.argv[3]}) must be one character\n`)
@@ -19,7 +21,7 @@ if (process.argv.length === 5) {
   }
 }
 
-
+// Programme
 let baseNumber = Number(process.argv[2])
 
 if (process.argv.length === 4) {
